@@ -1,0 +1,145 @@
+<html charset="UTF-8">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="robots" content="noindex">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <br/>
+    <div class="headerBtn" id="headerBtn">
+        <div style="text-align:right;">
+            <button class="no-print btnDefault print" onclick="window.print()">
+                <i class="icss-print"></i>
+                <span class="align">&nbspImprimir</span>
+            </button>
+        </div>
+    </div>
+    <br/>
+    <div class="document">
+        <table cellspacing="0" cellpadding="0">
+            <tr class="topLine">
+                <td class="bankLogo">
+                    <img src="logo.png" width="240px" alt="">
+                </td>
+                <td class="sideBorders center"><span style="font-size:24px;font-weight:bold;">NF-e</span></td>
+                <td class="boletoNumber center"><span><%= data.nfe_id %></span></td>
+            </tr>
+        </table>
+        <table cellspacing="0" cellpadding="0" border="1">
+            <tr>
+                <td width="70%" colspan="6">
+                    <span class="title">Nome da Empresa / CNPJ / CPF / Endereço:</span>
+                    <br/>
+                    <table border="0" style="border:none">
+                        <tr>
+                            <td width="60%"><span class="text">Simulação</span></td>
+                            <td><span class="text">CNPJ 01.000.000/0001-00</span></td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <span class="text">Rua Simulação, 1 - Jardim Simulação - São Paulo - SP - 10000-000</span>
+                </td>
+                <td width="30%">
+                    <span class="title">Agência/Código Beneficiário</span>
+                    <br/>
+                    <br/>
+                    <p class="content right">1234/12345-1</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="15%">
+                    <span class="title">Data do Documento</span>
+                    <br/>
+                    <p class="content center">
+                        <%= data.date %>
+                    </p>
+                </td>
+                <td width="17%" colspan="2">
+                    <span class="title">Num. do Documento</span>
+                    <br/>
+                    <p class="content center">1</p>
+                </td>
+                <td width="10%">
+                    <span class="title">Espécie doc</span>
+                    <br/>
+                    <p class="content center">DM</p>
+                </td>
+                <td width="8%">
+                    <span class="title">Aceite</span>
+                    <br/>
+                    <p class="content center">N</p>
+                </td>
+                <td>
+                    <span class="title">Data Processamento</span>
+                    <br/>
+                    <p class="content center">
+                        <%= data.date %>
+                    </p>
+                </td>
+                <td width="30%">
+                    <span class="title">Carteira/Nosso Número</span>
+                    <br/>
+                    <br/>
+                    <p class="content right">157/12345678-9</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="7">
+                    <table border="0" style="border:none">
+                        <tr>
+                            <td width="60%"><span class="text"><b>Nome do Pagador: </b> <%= data.name %> </span></td>
+                            <td><span class="text"><b>CNPJ/CPF: </b> <%= data.cpf %> </span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="text"><b>Endereço: </b> <%= data.address %> </span></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td><span class="text"><b>Sacador/Avalista: </b> &nbsp;</span></td>
+                            <td><span class="text"><b>CNPJ/CPF: </b> &nbsp;</span></td>
+                        </tr>
+                    </table>
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <td colspan="7">
+                    <span class="title">Produtos</span>
+                    <br>
+                    <% data.products.forEach(function(product) { %>
+                        <li>
+                            <strong><%= product.name %></strong> --------
+                            <%= product.value %>
+                        </li>
+                        <% }); %>
+                            <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="30%" colspan="3 ">
+                    <span class="title">Valor total</span>
+                    <br><br>
+                    <p class="content center">
+                        <%= data.value %>
+                    </p>
+                </td>
+                <td width="30%" colspan="4">
+                    <span class="title">Forma de Pagamento</span>
+                    <br><br>
+                    <p class="content center">
+                        <=% data.method %>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
