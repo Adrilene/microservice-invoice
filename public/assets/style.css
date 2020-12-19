@@ -30,10 +30,14 @@ table {
 }
 
 .bankLogo {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
     width: 28%;
 }
 
 .boletoNumber {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
     width: 62%;
     font-weight: bold;
 }
@@ -73,6 +77,7 @@ p.content {
 .sideBorders {
     border-left: 1px solid black;
     border-right: 1px solid black;
+    border-top: 1px solid black;
 }
 
 hr {

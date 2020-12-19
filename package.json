@@ -1,22 +1,26 @@
 {
-  "name": "microservice-invoice",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Adrilene/microservice-invoice.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Adrilene/microservice-invoice/issues"
-  },
-  "homepage": "https://github.com/Adrilene/microservice-invoice#readme",
-  "dependencies": {
-    "axios": "^0.21.0"
-  }
+    "name": "microservice-invoice",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Adrilene/microservice-invoice.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Adrilene/microservice-invoice/issues"
+    },
+    "homepage": "https://github.com/Adrilene/microservice-invoice#readme",
+    "dependencies": {
+        "axios": "^0.21.0",
+        "ejs": "^3.1.5",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.6"
+    }
 }

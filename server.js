@@ -12,9 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 
 app.get('/invoice', function(req, res) {
-
-    var today = new Date();
-    get_data.get_data(order_id).then(function(data) {
+    get_data.get_data(req.query.order_id).then(function(data) {
         res.render('pages/index', {
             data: data
         });

@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="robots" content="noindex">
-    <link href="style.css" rel="stylesheet">
+    <link href="/assets/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <table cellspacing="0" cellpadding="0">
             <tr class="topLine">
                 <td class="bankLogo">
-                    <img src="logo.png" width="240px" alt="">
+                    <img src="/assets/logo.png" width="240px" alt="">
                 </td>
                 <td class="sideBorders center"><span style="font-size:24px;font-weight:bold;">NF-e</span></td>
                 <td class="boletoNumber center"><span><%= data.nfe_id %></span></td>
@@ -34,7 +34,7 @@
                     <br/>
                     <table border="0" style="border:none">
                         <tr>
-                            <td width="60%"><span class="text">Simulação</span></td>
+                            <td width="60%"><span class="text">CarePET</span></td>
                             <td><span class="text">CNPJ 01.000.000/0001-00</span></td>
                         </tr>
                     </table>
@@ -114,8 +114,8 @@
                     <br>
                     <% data.products.forEach(function(product) { %>
                         <li>
-                            <strong><%= product.name %></strong> --------
-                            <%= product.value %>
+                            <%= product.name %> -------- R$
+                                <%= product.price %>
                         </li>
                         <% }); %>
                             <br>
@@ -134,7 +134,7 @@
                     <span class="title">Forma de Pagamento</span>
                     <br><br>
                     <p class="content center">
-                        <=% data.method %>
+                        <%= data.payment_method %>
                     </p>
                 </td>
             </tr>
