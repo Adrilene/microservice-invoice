@@ -3,8 +3,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const get_data = require('./get_data');
 const app = express();
+const cors = require('cors')
+
 
 app.use(express.static(__dirname + '/public'));
+app.use(cors());
 
 
 app.set('view engine', 'ejs');
